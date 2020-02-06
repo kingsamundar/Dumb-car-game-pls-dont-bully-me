@@ -1,0 +1,28 @@
+condition = ""
+start = False
+
+while True:
+    condition = input("> ").lower()
+
+    if condition == "help":
+        print("""
+'start' - starts the car
+'stop' - stops the car
+'quit' - quits the process""")
+
+    if condition == "start":
+        if start:
+            print("car is already moving!")
+        else:
+            start = True
+            print("starting the car - now moving")
+
+    if condition == "stop":
+        if not start:
+            print("car is already immobile!")
+        else:
+            start = False
+            print("stopping the car - now inert")
+
+    if condition == "quit":
+        break
